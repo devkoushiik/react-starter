@@ -1,4 +1,4 @@
 const App = () => {
-  return <div className="underline text-3xl">App</div>;
+  return <div>App</div>;
 };
 export default App;
