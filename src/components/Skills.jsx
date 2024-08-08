@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { SKILLS } from "../constants";
 
-const contanierVariants = {
+const containerVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -38,7 +38,7 @@ const Skills = () => {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        variants={contanierVariants}
+        variants={containerVariants}
         viewport={{ once: true }}
         className="mx-2 flex flex-col rounded-3xl px-4 py-2 lg:px-20 border border-stone-50/30"
       >
