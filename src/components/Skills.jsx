@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { SKILLS } from "../constants";
-import { containerClasses } from "@mui/material";
 
 const contanierVariants = {
   hidden: { opacity: 0, y: 20 },
