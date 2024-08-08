@@ -12,10 +12,10 @@ body {
 
 body {
   font-family: "Space Grotesk", sans-serif;
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
 }
 
 .bg-img {
-  background-image: url("./assets//bg-img5.png");
+  background-image: url("./assets/bg-img5.png");
 }
