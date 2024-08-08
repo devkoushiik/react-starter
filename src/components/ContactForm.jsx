@@ -1,4 +1,5 @@
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { Toaster } from "react-hot-toast";
@@ -63,10 +64,20 @@ const ContactForm = () => {
   return (
     <section className="p-4 lg:w-3/4" id="contact">
       <Toaster />
-      <h2 className="my-8 text-center text-4xl font-semibold tracking-tighter">
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="my-8 text-center text-4xl font-semibold tracking-tighter"
+      >
         Let&apos;s connect
-      </h2>
-      <form onSubmit={handleSubmit}>
+      </motion.h2>
+      <motion.form
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        onSubmit={handleSubmit}
+      >
         <div className="mb-4 flex space-x-4">
           <div className="lg:w-1/2">
             <input
@@ -78,7 +89,16 @@ const ContactForm = () => {
               value={formData.name}
               className="mb-8 w-full appearance-none rounded-lg border border-stone-50/30 bg-transparent px-3 py-2 text-sm focus:border-stone-400 focus:outline-none"
             />
-            {errors.name && <text-sm text-rose-800>{errors.name}</text-sm>}
+            {errors.name && (
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                className="text-sm text-rose-500"
+              >
+                {errors.name}
+              </motion.p>
+            )}
           </div>
           {/* email */}
           <div className="lg:w-1/2">
@@ -91,7 +111,16 @@ const ContactForm = () => {
               value={formData.email}
               className="mb-8 w-full appearance-none rounded-lg border border-stone-50/30 bg-transparent px-3 py-2 text-sm focus:border-stone-400 focus:outline-none"
             />
-            {errors.email && <text-sm text-rose-800>{errors.email}</text-sm>}
+            {errors.email && (
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                className="text-sm text-rose-500"
+              >
+                {errors.email}
+              </motion.p>
+            )}
           </div>
         </div>
         {/* message */}
@@ -105,7 +134,16 @@ const ContactForm = () => {
             rows={6}
             className="mb-8 w-full appearance-none rounded-lg border border-stone-50/30 bg-transparent px-3 py-2 text-sm focus:border-stone-400 focus:outline-none"
           />
-          {errors.message && <text-sm text-rose-800>{errors.message}</text-sm>}
+          {errors.message && (
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="text-sm text-rose-500"
+            >
+              {errors.message}
+            </motion.p>
+          )}
         </div>
         <button
           type="submit"
@@ -118,7 +156,7 @@ const ContactForm = () => {
             {isSending ? "Sending..." : "Send"} <FiSend />
           </div>
         </button>
-      </form>
+      </motion.form>
     </section>
   );
 };
