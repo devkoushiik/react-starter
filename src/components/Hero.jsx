@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="w-full md:w-1/2">
         <h2 className="my-8 p-2 text-4xl font-bold md:text-5xl lg:text-[7rem]">
           {HERO.name}
-          <span className="text-md ml-6">{HERO.lastName}</span>
+          {/* <span className="text-md ml-6">{HERO.lastName}</span> */}
         </h2>
         <p className="p-2 text-3xl tracking-tighter lg:text-4xl">
           {HERO.greet}

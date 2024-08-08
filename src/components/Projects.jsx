@@ -1,5 +1,5 @@
 import { PROJECTS } from "../constants";
-import { MdArrowBack, MdArrowOutward } from "react-icons/md";
+import { MdArrowOutward } from "react-icons/md";
 
 const Projects = () => {
   return (
