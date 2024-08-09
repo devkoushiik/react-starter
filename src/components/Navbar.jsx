@@ -31,11 +31,11 @@ const Navbar = () => {
     <div className="mb-5">
       <nav className="fixed left-0 right-0 top-6 z-50">
         {/* Desktop */}
-        <div className="mx-auto hidden max-w-2xl items-center justify-center rounded-lg border border-stone-50/30 bg-black/20 py-3 backdrop-blur-lg lg:flex">
+        <div className="mx-auto hidden max-w-3xl items-center justify-center rounded-lg border border-stone-50/30 bg-black/20 py-3 backdrop-blur-lg lg:flex">
           <div className="flex items-center justify-between gap-6">
             <div>
               <a href="#">
-                <img src={logo} alt="logo image" width={150} />
+                <img width={120} src={logo} alt="logo image" />
               </a>
             </div>
             <div>
@@ -44,7 +44,7 @@ const Navbar = () => {
                   <li key={index}>
                     <a
                       href={item.href}
-                      className="text-sm hover:text-yellow-400"
+                      className="text-md hover:text-yellow-400 uppercase"
                       onClick={(e) => handleLinkClick(e, item.href)}
                     >
                       {item.label}
@@ -59,7 +59,7 @@ const Navbar = () => {
         <div className="rounded-lg px-4 backdrop-blur-xl lg:hidden">
           <div className="flex items-center justify-between">
             <a href="#">
-              <img src={logo} alt="logo" width={90} className="m-2" />
+              <img src={logo} alt="logo" width={115} className="m-2" />
             </a>
             <div className="flex items-center">
               <button
